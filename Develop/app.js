@@ -7,12 +7,7 @@ const fs = require("fs");
 
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
-
 const render = require("./lib/htmlRenderer");
-
-
-// Write code to use inquirer to gather information about the development team members,
-// and to create objects for each team member (using the correct classes as blueprints!)
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
@@ -34,9 +29,6 @@ const render = require("./lib/htmlRenderer");
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work! ```
 
-
-// Write code to use inquirer to gather information about the development team members,
-// and to create objects for each team member (using the correct classes as blueprints!)
 const employees = [];
 const newEmployee = () => {
     inquirer
@@ -146,12 +138,9 @@ const addEmployee = () => {
             } else {
                 fs.writeFile(outputPath, render(employees), "utf8", function(err) {
                     if (err) { return console.log(err) }
-
                     console.log("Success!");
                 });
             }
-
-
         })
 }
 if (fs.existsSync(OUTPUT_DIR)) {
