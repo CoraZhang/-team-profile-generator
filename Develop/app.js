@@ -41,6 +41,15 @@ const employees = [];
 const newEmployee = () => {
     inquirer
         .prompt([{
+                type: "list",
+                name: "role",
+                message: "What role does the employee play in the organization?",
+                choices: [
+                    "Manager",
+                    "Engineer",
+                    "Intern"
+                ]
+            }, {
                 type: "input",
                 name: "name",
                 message: "What is the name of the employee?"
@@ -53,16 +62,7 @@ const newEmployee = () => {
                 name: "email",
                 message: "What is the employee's email address?"
             },
-            {
-                type: "list",
-                name: "role",
-                message: "What role does the employee play in the organization?",
-                choices: [
-                    "Manager",
-                    "Engineer",
-                    "Intern"
-                ]
-            }
+
         ]).then(function(data) {
 
             switch (data.role) {
