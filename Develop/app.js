@@ -52,15 +52,19 @@ const newEmployee = () => {
             }, {
                 type: "input",
                 name: "name",
-                message: "What is the name of the employee?"
+                message: "What is the name of the employee?",
+                validate: validation
             }, {
                 type: "input",
                 name: "id",
-                message: "What is the ID of the employee?"
+                message: "What is the ID of the employee?",
+                // The users guess must be a number or letter
+                validate: validation
             }, {
                 type: "input",
                 name: "email",
-                message: "What is the employee's email address?"
+                message: "What is the employee's email address?",
+                validate: validateEmail
             },
 
         ]).then(function(data) {
@@ -70,7 +74,8 @@ const newEmployee = () => {
                     inquirer.prompt({
                         type: "input",
                         name: "officeNumber",
-                        message: "What is the manager's office number?"
+                        message: "What is the manager's office number?",
+                        validate: validation,
                     }).then(function(manData) {
                         const newManager = new Manager(data.name, data.id, data.email, manData.officeNumber);
                         newManager.role = "Manager";
@@ -82,7 +87,8 @@ const newEmployee = () => {
                     inquirer.prompt({
                         type: "input",
                         name: "github",
-                        message: "What is the engineer's Github Username?"
+                        message: "What is the engineer's Github Username?",
+                        validate: validation,
 
                     }).then(function(engData) {
                         const newEngineer = new Engineer(data.name, data.id, data.email, engData.github);
@@ -95,7 +101,8 @@ const newEmployee = () => {
                     inquirer.prompt({
                         type: "input",
                         name: "school",
-                        message: "What is the intern's school?"
+                        message: "What is the intern's school?",
+                        validate: validation
 
                     }).then(function(intData) {
                         const newIntern = new Intern(data.name, data.id, data.email, intData.school);
@@ -130,7 +137,8 @@ const addEmployee = () => {
         .prompt({
             type: "confirm",
             name: "addEmployee",
-            message: "Would you like to add an employee?"
+            message: "Would you like to add an employee?",
+            validate: validation
 
         }).then(function(data) {
             if (data.addEmployee) {
