@@ -2,6 +2,8 @@
 
 In this mini project, the challenge is to build a Node CLI that takes in information about employees and generates an HTML webpage that displays summaries for each person. Since testing is a key piece in making code maintainable, all unit tests will also be ensured to pass.
 
+## Demo video link:
+https://drive.google.com/file/d/1U0I45AYuHg8kDiWNZAuFyGRkFraoD7We/view?usp=sharing
 
 ## Functionality
 
