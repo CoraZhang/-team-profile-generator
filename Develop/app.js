@@ -137,7 +137,7 @@ const addEmployee = () => {
                 newEmployee();
             } else {
                 fs.writeFile(outputPath, render(employees), "utf8", function(err) {
-                    if (err) { return console.log(err) };
+                    if (err) { return console.log(err) }
 
                     console.log("Success!");
                 });
