@@ -19,9 +19,11 @@ so that I have quick access to emails and GitHub profiles
 
 * Your app will run as a Node CLI to gather information about each employee.
 
-* Below is an example of what your application may look like. Remember, the styling is completely up to you so try to make it unique.
+* Below is an example of what your application may look like. 
 
-![Employee Summary 1](./Assets/10-OOP-homework-demo-1.png)
+* ![alt text](./Assets/Screen.png)
+
+* ![alt text](./Assets/Terminal.png)
 
 In the `Develop` folder, there is a `package.json`, so make sure to `npm install`.
 
